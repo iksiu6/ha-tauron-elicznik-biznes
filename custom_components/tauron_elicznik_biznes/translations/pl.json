@@ -1,0 +1,65 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Logowanie do eLicznika TAURON (klient biznesowy)",
+        "description": "Podaj dane logowania do serwisu TAURON Dystrybucja. Integracja zawsze loguje się bezpośrednio do usługi eLicznik, niezależnie od domyślnego serwisu konta.",
+        "data": {
+          "username": "Adres e-mail",
+          "password": "Hasło"
+        }
+      },
+      "meter": {
+        "title": "Punkt poboru i odczyty",
+        "description": "Wybierz punkt poboru energii (PPE) i ustaw, jak często pobierać dane. Zbyt częste odpytywanie może spowodować czasową blokadę konta przez TAURON.",
+        "data": {
+          "meter_id": "Punkt poboru (PPE)",
+          "scan_interval": "Interwał odczytów",
+          "import_statistics": "Importuj dane godzinowe do statystyk (panel Energia)",
+          "history_days": "Ile dni historii zaimportować przy pierwszym uruchomieniu",
+          "register_multiplier": "Przekładnia liczydła (przekładniki), 0 = wykryj automatycznie"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Ponowne logowanie",
+        "description": "Hasło dla konta {username} przestało działać. Podaj aktualne hasło.",
+        "data": {
+          "password": "Hasło"
+        }
+      },
+      "reconfigure": {
+        "title": "Zmiana danych logowania",
+        "data": {
+          "username": "Adres e-mail",
+          "password": "Hasło"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Nieprawidłowy e-mail lub hasło.",
+      "blocked": "TAURON czasowo zablokował logowanie (zbyt wiele prób). Spróbuj ponownie później.",
+      "cannot_connect": "Nie udało się połączyć z eLicznikiem.",
+      "no_business_meter": "Na tym koncie nie znaleziono punktu poboru dla klienta biznesowego (widok WO).",
+      "meter_not_found": "Na tym koncie nie ma skonfigurowanego punktu poboru.",
+      "unknown": "Nieoczekiwany błąd - szczegóły w logach."
+    },
+    "abort": {
+      "already_configured": "Ten punkt poboru jest już skonfigurowany.",
+      "reauth_successful": "Zalogowano ponownie.",
+      "reconfigure_successful": "Zmieniono dane logowania."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Ustawienia odczytów",
+        "data": {
+          "scan_interval": "Interwał odczytów",
+          "import_statistics": "Importuj dane godzinowe do statystyk (panel Energia)",
+          "history_days": "Ile dni historii zaimportować przy pierwszym uruchomieniu",
+          "register_multiplier": "Przekładnia liczydła (przekładniki), 0 = wykryj automatycznie"
+        }
+      }
+    }
+  }
+}

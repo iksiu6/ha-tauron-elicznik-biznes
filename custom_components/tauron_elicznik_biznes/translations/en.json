@@ -1,0 +1,65 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "TAURON eLicznik login (business customer)",
+        "description": "Enter your TAURON Dystrybucja credentials. The integration always logs in directly to the eLicznik service, regardless of the account's default service.",
+        "data": {
+          "username": "E-mail",
+          "password": "Password"
+        }
+      },
+      "meter": {
+        "title": "Metering point and polling",
+        "description": "Select the metering point (PPE) and how often to fetch data. Polling too often may get the account temporarily blocked by TAURON.",
+        "data": {
+          "meter_id": "Metering point (PPE)",
+          "scan_interval": "Polling interval",
+          "import_statistics": "Import hourly data into statistics (Energy dashboard)",
+          "history_days": "Days of history to import on first run",
+          "register_multiplier": "Register multiplier (CT ratio), 0 = auto-detect"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Re-authenticate",
+        "description": "The password for {username} no longer works. Enter the current password.",
+        "data": {
+          "password": "Password"
+        }
+      },
+      "reconfigure": {
+        "title": "Change credentials",
+        "data": {
+          "username": "E-mail",
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Invalid e-mail or password.",
+      "blocked": "TAURON temporarily blocked logins (too many attempts). Try again later.",
+      "cannot_connect": "Failed to connect to eLicznik.",
+      "no_business_meter": "No business (WO) metering point found on this account.",
+      "meter_not_found": "The configured metering point is not available on this account.",
+      "unknown": "Unexpected error - see logs."
+    },
+    "abort": {
+      "already_configured": "This metering point is already configured.",
+      "reauth_successful": "Re-authentication successful.",
+      "reconfigure_successful": "Credentials updated."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Polling settings",
+        "data": {
+          "scan_interval": "Polling interval",
+          "import_statistics": "Import hourly data into statistics (Energy dashboard)",
+          "history_days": "Days of history to import on first run",
+          "register_multiplier": "Register multiplier (CT ratio), 0 = auto-detect"
+        }
+      }
+    }
+  }
+}

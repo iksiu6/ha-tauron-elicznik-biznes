@@ -1,0 +1,20 @@
+{
+  "domain": "tauron_elicznik_biznes",
+  "name": "Tauron eLicznik Biznes",
+  "codeowners": [
+    "@iksiu6"
+  ],
+  "config_flow": true,
+  "dependencies": [
+    "recorder"
+  ],
+  "documentation": "https://github.com/iksiu6/ha-tauron-elicznik-biznes",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/iksiu6/ha-tauron-elicznik-biznes/issues",
+  "loggers": [
+    "custom_components.tauron_elicznik_biznes"
+  ],
+  "requirements": [],
+  "version": "0.2.0"
+}
